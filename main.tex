@@ -26,8 +26,15 @@
 	
 \maketitle % Print the title
 \tableofcontents
-\section{Supsection}
+% \section{Supsection}
 
-\input{sections/q}
+% \input{sections/q}
+
+\foreach \i in {1, 2, 3, 4, ...,36} {%
+    \edef\FileName{sections/c\i}%     The % here are necessary to eliminate any
+    \IfFileExists{\FileName}{%  spurious spaces that may get inserted
+       \input{\FileName}%       at these points
+    }
+}
 
 \end{document}
