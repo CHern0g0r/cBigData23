@@ -1,0 +1,33 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+% \documentclass[14pt]{extarticle}
+\usepackage{pdfpages}
+\usepackage{float}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Programming and AI} % Title of the assignment
+
+%----------------------------------------------------------------------------------------
+
+\DeclareMathOperator*\uplim{\overline{lim}}
+
+\usepackage[parfill]{parskip}
+\usepackage{listings}
+
+\begin{document}
+	
+\maketitle % Print the title
+\tableofcontents
+\section{Supsection}
+
+\input{sections/q}
+
+\end{document}
