@@ -1,0 +1,36 @@
+Определение больших данных. 3 “V” of big data. Характеристики больших данных. 
+Grid технология. Определение. Архитектура. 
+Примеры задач больших с описанием анализа. 
+Модели хранения данных. Теорема CAP. ACID свойства. 
+Распределённая файловая система. HDFS. Архитектура. Особенности, сценарии спользования. Достоинства и недостатки. 
+Системы хранения данных NoSQL. ClickHouse. Архитектура. Особенности, ценарии использования. Достоинства и недостатки. 
+SQL и NoSQL. Определения. Сравнения. Сценарии использования. 
+Гетерогенные УБД. reenplum. спользования. Достоинства и недостатки. 
+Типы обработки данных. Grid, WMS, All-Pairs абстракции, 
+Концепция MapReduce вычислений. 
+Apache Spark: определение, назначение. 
+Apache Spark: особенности. 
+Apache Spark: архитектура. 
+Различия между MapReduce и Spark. 
+Apache Spark: RDD. 
+Apache Spark: трансформация и действие (примеры), lineage. 
+Apache Spark: ленивые вычисления, их плюсы и минусы. 
+Ленивые вычисления: кэширование. 
+Конфигурация Spark приложения. 
+Процесс выполнения Spark приложения. 
+Использование RDD и кэша во время выполнения Spark приложения. 
+Взаимодействие Apache Spark с JVM и интерпретатором Python. 
+Spark History Server: организация мониторинга Spark приложений. 
+Назначение MLlib, Streaming, SQL, GraphX. 
+Структура ML проекта. Conda. DVC. Docker. Jenkins. DevOps практики. ранилища секретов. 
+Apache Kafka. Определение. Топики и партиции. Смещение и чтение данных. 
+Apache Kafka. Физическая организация партиций. Автоматическое распределение ообщений. Хеширование ключей сообщений. Репликация данных. 
+Apache Kafka. Гарантии доставки сообщений. Дублирование сообщений. 
+Apache Kafka. Consumer Groups. Kafka Stream, ksql, Spark Streaming. 
+ETL/ELT процессы. Хранилища, витрины, озёра данных. 
+Kubernetes. Контейнерная виртуализация. Архитектура. Под. 
+Kubernetes. Пространства имён. Метки. Переменные среды. 
+Kubernetes. ConfigMap. Resources. QoS. Монтирование Docker volume. 
+Kubernetes. HostPath. PersistentVolume, PersistentVolumeClaim. 
+Kubernetes. Pods communication. Service. Multiple Pods. Headless Service. Pod eplicas. 
+Kubernetes. ReplicaSet. Deployment. Recreate. Rolling Update. StatefulSet. StatefulSet: eadless Service. DaemonSet. Job.

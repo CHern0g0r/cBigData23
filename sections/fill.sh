@@ -7,4 +7,4 @@ while read line; do
     echo $header > "c$i.tex"
 done < $question_list
 
-echo $template > q1.tex
+# echo $template > q1.tex
