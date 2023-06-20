@@ -1,1 +1,22 @@
 \section{Apache Spark: трансформация и действие (примеры), lineage.}
+
+\D{
+    Трансформация. Не приводит к запуску вычислений.
+    \begin{itemize}
+        \item map(f)
+        \item filter(f)
+        \item union(otherDataset)
+        \item reduceByKey(func)
+        \item join(otherDataset)
+    \end{itemize}
+}
+
+\D{
+    Действие. Запускает цепочку вычислений.
+    \begin{itemize}
+        \item collect()
+        \item count()
+        \item take(n)
+        \item saveAsTextFile(path)
+    \end{itemize}
+}
