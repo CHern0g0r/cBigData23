@@ -4,13 +4,27 @@
 партиций, распределенных на рабочих узлах.
 
 \D{
-    RDD - Resilient Distributed Dataset:
+    RDD (Resilient Distributed Dataset) - абстракция датасета, разбитая на партиции.
     \begin{itemize}
         \item Неизменяемая распределенная коллекция.
         \item Отказоустойчивая (для RDD ведется Lineage).
+        
         Spark всегда знает как восстановить RDD в случае сбоя.
+        Checkpoints/parital calculations.
         \item Внутри разбита на партиции - минимальный объем
         RDD, который будет обработан каждым рабочим узлом.
         \item Распределена по узлам Executors.
     \end{itemize}
 }
+
+Состоит из:
+    \begin{itemize}
+        \item A partition set
+        \item Dependencies on parent datasets
+        \item The function that computes it from the parent datasets
+        \item Data Locality Settings
+        \item Partitioning logic
+    \end{itemize}
+
+RDD хранит не только начальный/конечный результат, но и
+промежуточные.
