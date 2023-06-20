@@ -1,1 +1,26 @@
 \section{Процесс выполнения Spark приложения.}
+
+\begin{itemize}
+    \item Для каждого действия строится DAG выполнения;
+    
+    Вершины - вычисления над данными, ребра перемещение датасетов.
+    \item DAG отправляется в DAGScheduler;
+    \item DAGScheduler разбивает его на этапы (stages) и отправляет
+    на выполнение на TaskScheduler;
+    \item TaskScheduler использует менеджер кластера (Yarn,Mesos,
+    Spark Standalone) для выделения ресурсов ;
+
+    Можно параллелить независимые части графа.
+    \item Каждый Executor получает от Driver задание (Tasks) и
+    выполняет его над своей порцией данных;
+    \item Данные отсылаются на Driver или сохраняются в файл или
+    кэшируются в памяти Executor
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{images/sparkapp.png}
+		\caption{Spark app execution}
+	\end{minipage}
+\end{figure}
