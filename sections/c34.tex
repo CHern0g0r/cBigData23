@@ -1,1 +1,53 @@
 \section{Kubernetes. HostPath. PersistentVolume, PersistentVolumeClaim.}
+
+HostPath прописывается в конфиге пода.
+
+Типы HostPath:
+\begin{itemize}
+    \item Dir
+    \item File
+    \item Socket
+    \item FileOrCreate
+    \item DirOrCreate
+    \item CharDevice
+    \item BlockDevice
+\end{itemize}
+
+Проблемы:
+\begin{itemize}
+    \item Небезопасно
+    \item Данные хранятся только на одном узле
+    \item Непредсказуемое поведение
+    \item Проблемы с разрешениями
+\end{itemize}
+
+\D{
+    PersistentVolume - неизменяемое представление, доступное для взаимодействия
+    как с реальным хранилищем, оборачивающее внутреннее представление хранилища
+    (NFS, DFS, LocalFS...).
+
+    PersistentVolumeClaim - требования, которые предоставляются контейнером
+    к PersistentVolume, необходимым для подключения.
+}
+
+Типы PersistentVolume:
+\begin{itemize}
+    \item awsElasticBlockStore
+    \item asureDisk
+    \item cephfs
+    \item csi
+    \item gcePersistentDisk
+    \item glusterfs
+    \item local
+    \item nfs
+    \item ...
+\end{itemize}
+
+PV может быть одновременно замонтирован с использованием только одного
+режима доступа:
+\begin{itemize}
+    \item ReadWriteMany
+    \item ReadWriteOnce
+    \item ReadWriteOncePod
+    \item ReadOnlyMany
+\end{itemize}
